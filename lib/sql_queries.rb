@@ -13,7 +13,7 @@ def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_
   # GROUP BY title
   # HAVING SUM(pledges.amount)"
   # "SELECT projects.title, SUM(pledges.amount) FROM projects INNER JOIN pledges ON projects.id = pledges.project_id"
-  "SELECT projects.title, SUM(pledges.amount) FROM projects INNER JOIN pledges WHERE project_id = 1 GROUP BY title"
+  "SELECT projects.title, SUM(pledges.amount) FROM projects INNER JOIN pledges WHERE project_id = pledges.project_id GROUP BY title"
 end
 
 def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_name
